@@ -9,7 +9,8 @@
 #' @author Carlos Alberto Cardozo Delgado <cardozorpackages@gmail.com>.
 #' @examples
 #' library(modesto)
-#' Mt(matrix(c(0,2,3,0),2,2,byrow=TRUE),t=0.7,epsilon=0.005) # A two states CTMC example
+#' R <- matrix(c(0,1,0,0,0, 1/72,0,1,0,0, 0,2/72,0,1,0, 0,0,3/72,0,1/2, 0,0,0,4/72,0),5,5,byrow=TRUE)
+#' Mt(R,t=24,epsilon=0.005) # A two states CTMC example
 #' @export Mt
 
 Mt <- function(R,t,epsilon){
@@ -36,5 +37,5 @@ Mt <- function(R,t,epsilon){
     A <- A%*%P_hat
     sum <- sum + ygk
   }
-  return(list(Pt = round(B/r,4),M = k,P_hat = P_hat))
+  return(list(M_t = round(B/r,4),iter = k,P_hat = P_hat))
 }
