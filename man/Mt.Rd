@@ -19,7 +19,7 @@ Mt(R, t, epsilon)
 \examples{
 library(modesto)
 R <- matrix(c(0,1,0,0,0, 1/72,0,1,0,0, 0,2/72,0,1,0, 0,0,3/72,0,1/2, 0,0,0,4/72,0),5,5,byrow=TRUE)
-Mt(R,t=24,epsilon=0.005) # A two states CTMC example
+Mt(R,t=24,epsilon=0.005) # A five states CTMC example
 }
 \references{
 Ross, S, Introduction to Probability Models, Eleven Edition. Academic Press, 2014.

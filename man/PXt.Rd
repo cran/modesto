@@ -20,8 +20,9 @@ PXt(X0, R, t, epsilon)
 }
 \examples{
 library(modesto)
-PXt(c(1,0,0),matrix(c(0,2,0,3,0,1,0,6,0),3,3,byrow=TRUE),t=0.5,epsilon=0.01)
+R <- matrix(c(0,2,0,3,0,1,0,6,0),3,3,byrow=TRUE)
 X0 <- c(1,0,0)
+PXt(X0,R,t=0.5,epsilon=0.01) # A three states CTMC example
 }
 \references{
 Ross, S, Introduction to Probability Models, Eleven Edition. Academic Press, 2014.

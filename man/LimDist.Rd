@@ -4,12 +4,16 @@
 \alias{LimDist}
 \title{Tool to computate the limiting distribution for a Continuous Time Markov Chain, CTMC.}
 \usage{
-LimDist(X, rate)
+LimDist(X, rate, epsilon, iter)
 }
 \arguments{
 \item{X}{matrix, represents a rate matrix of a CTMC or the transition probability matrix of the DTMC associated to the CTMC.}
 
-\item{rate}{boolean, if rate is equal to FALSE then the argument X represents the transition probability matrix of the DTMC associated to the CTMC.}
+\item{rate}{boolean, if rate is equal to TRUE then the argument X represents the rate matrix of the CTMC. If rate is equal to FALSE then the argument X represents the probability transition matrix of the CTMC.}
+
+\item{epsilon}{numeric, represents the error of approximation.}
+
+\item{iter}{integer, represents the maximum of iterations.}
 }
 \description{
 \code{LimDist} is used to obtain the limiting distribution of a homogeneous continuous time Markov chain.

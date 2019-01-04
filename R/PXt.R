@@ -10,8 +10,9 @@
 #' @author Carlos Alberto Cardozo Delgado <cardozorpackages@gmail.com>.
 #' @examples
 #' library(modesto)
-#' PXt(c(1,0,0),matrix(c(0,2,0,3,0,1,0,6,0),3,3,byrow=TRUE),t=0.5,epsilon=0.01)
+#' R <- matrix(c(0,2,0,3,0,1,0,6,0),3,3,byrow=TRUE)
 #' X0 <- c(1,0,0)
+#' PXt(X0,R,t=0.5,epsilon=0.01) # A three states CTMC example
 #' @export PXt
 #'
 PXt <- function(X0,R,t,epsilon){
