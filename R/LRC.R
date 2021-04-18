@@ -16,6 +16,10 @@
 #' @export LRC
 
 LRC <- function(X,costs){
+  if (missingArg(X))
+    stop("The X argument is missing.")
+  if (missingArg(costs))
+    stop("The cost vector argument 'costs' is missing.")
   rate <- TRUE
   indicator <- LimDist(X,rate)$indicator
   if(indicator==1){

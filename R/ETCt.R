@@ -14,7 +14,13 @@
 #' ETCt(R,c(-80,-15,50,125,200),t=24,epsilon=0.001) # A four states CTMC example
 #' @export ETCt
 
-ETCt <- function(R,c,t,epsilon){
+ETCt <- function(R,c,t,epsilon=0.01){
+  if (missingArg(R))
+    stop("The rate matrix parameter, R, is missing.")
+  if (missingArg(c))
+    stop("The cost vector argument, c, is missing.")
+  if (missingArg(t))
+    stop("The length of time parameter, t, is missing.")
   M_t <- Mt(R,t,epsilon)$M_t
   output <- M_t%*%c
   return(list(Costs = output, M_t = M_t))

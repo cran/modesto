@@ -4,7 +4,7 @@
 \alias{LimDist}
 \title{Tool to computate the limiting distribution for a Continuous Time Markov Chain, CTMC.}
 \usage{
-LimDist(X, rate, epsilon, iter)
+LimDist(X, rate, epsilon = 0.01, iter)
 }
 \arguments{
 \item{X}{matrix, represents a rate matrix of a CTMC or the transition probability matrix of the DTMC associated to the CTMC.}

@@ -4,7 +4,7 @@
 \alias{ETCt}
 \title{Tool to computate the Expected Total Cost vector for a Continuous Time Markov Chain, CTMC.}
 \usage{
-ETCt(R, c, t, epsilon)
+ETCt(R, c, t, epsilon = 0.01)
 }
 \arguments{
 \item{R}{numeric, represents the rate matrix of a CTMC.}

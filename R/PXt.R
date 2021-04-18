@@ -15,7 +15,13 @@
 #' PXt(X0,R,t=0.5,epsilon=0.01) # A three states CTMC example
 #' @export PXt
 #'
-PXt <- function(X0,R,t,epsilon){
-  output <- t(X0)%*%Pt(R,t,epsilon)$Pt
+PXt <- function(X0,R,t,epsilon=0.01){
+  if (missingArg(X0))
+    stop("The probability distribution of the initial state, X0, is missing.")
+  if (missingArg(R))
+    stop("The rate matrix parameter, R, is missing.")
+  if (missingArg(t))
+    stop("The length of time parameter, t, is missing.")
+  output <- t(X0)%*%Pt2(R,t,epsilon)$Pt
   return(list(PXt= output,most.prob=which.max(output),least.prob=which.min(output)))
 }

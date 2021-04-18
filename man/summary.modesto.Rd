@@ -14,3 +14,8 @@
 \description{
 summary.modesto displays the summary of the calculated quantities from an object of class 'modesto'.
 }
+\examples{
+# A two states CTMC example
+model <-LimDist(matrix(c(0,2,3,0),2,2,byrow=TRUE),rate=TRUE,epsilon=0.005)
+summary(model)
+}

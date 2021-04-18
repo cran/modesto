@@ -4,7 +4,7 @@
 \alias{Mt}
 \title{Tool to computate the Occupancy Matrix for a Continuous Time Markov Chain, CTMC.}
 \usage{
-Mt(R, t, epsilon)
+Mt(R, t, epsilon = 0.01)
 }
 \arguments{
 \item{R}{numeric, represents the rate matrix of a CTMC.}

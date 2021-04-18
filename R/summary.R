@@ -3,8 +3,9 @@
 #' summary.modesto displays the summary of the calculated quantities from an object of class 'modesto'.
 #' @param object an object of the class modesto. This object is returned from the call to LimDist() function.
 #' @param ... other arguments.
-#' @example
-#' model <-LimDist(matrix(c(0,2,3,0),2,2,byrow=TRUE),rate=TRUE,epsilon=0.005) # A two states CTMC example
+#' @examples
+#' # A two states CTMC example
+#' model <-LimDist(matrix(c(0,2,3,0),2,2,byrow=TRUE),rate=TRUE,epsilon=0.005)
 #' summary(model)
 #' @export
 summary.modesto <- function(object, ...) {

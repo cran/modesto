@@ -14,15 +14,13 @@
 #' @importFrom markovchain is.irreducible
 #' @export LimDist
 
-LimDist <- function(X,rate,epsilon,iter){
+LimDist <- function(X,rate,epsilon=0.01,iter){
   if (missingArg(X)) {
     stop("The X argument is missing.")
   }
   if (missingArg(rate)){
-    stop("The rate argument is missing.")
+    stop("The 'rate' argument is missing.")
   }
-  if (missingArg(epsilon))
-      epsilon <- 1e-02
   if (missingArg(iter))
       iter <- 1000
 

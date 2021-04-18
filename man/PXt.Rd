@@ -4,7 +4,7 @@
 \alias{PXt}
 \title{Tool to computate the transient probability distribution for a Continuous Time Markov Chain, CTMC.}
 \usage{
-PXt(X0, R, t, epsilon)
+PXt(X0, R, t, epsilon = 0.01)
 }
 \arguments{
 \item{X0}{numeric vector, represents the probability distribution of the initial state.}

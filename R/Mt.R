@@ -13,7 +13,11 @@
 #' Mt(R,t=24,epsilon=0.005) # A five states CTMC example
 #' @export Mt
 
-Mt <- function(R,t,epsilon){
+Mt <- function(R,t,epsilon=0.01){
+  if (missingArg(R))
+    stop("The rate matrix parameter, R, is missing.")
+  if (missingArg(t))
+    stop("The length of time parameter, t, is missing.")
   rs <- rowSums(R)
   r <- max(rs)
   P_hat <- R/r
