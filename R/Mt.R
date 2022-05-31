@@ -3,17 +3,18 @@
 #'\code{Mt} is used to obtain the Occupancy matrix of a homogeneous continuous time Markov chain for a period of time [0,t].
 #' @param R numeric, represents the rate matrix of a CTMC.
 #' @param t numeric, represents the length of time.
-#' @param epsilon numeric, represents the error bound of the approximation of M(t). Default value is 0.01.
+#' @param epsilon numeric, represents the error bound of the approximation of M(t). Default value is 0.001.
 #' @references Ross, S, Introduction to Probability Models, Eleven Edition. Academic Press, 2014.
 #' @references Kulkarni V, Introduction to modeling and analysis of stochastic systems. Second Edition. Springer-Verlag, 2011.
 #' @author Carlos Alberto Cardozo Delgado <cardozorpackages@gmail.com>.
 #' @examples
 #' library(modesto)
+#' # A five states CTMC example
 #' R <- matrix(c(0,1,0,0,0, 1/72,0,1,0,0, 0,2/72,0,1,0, 0,0,3/72,0,1/2, 0,0,0,4/72,0),5,5,byrow=TRUE)
-#' Mt(R,t=24,epsilon=0.005) # A five states CTMC example
+#' Mt(R,t=24,epsilon=0.005)
 #' @export Mt
 
-Mt <- function(R,t,epsilon=0.01){
+Mt <- function(R,t,epsilon=0.001){
   if (missingArg(R))
     stop("The rate matrix parameter, R, is missing.")
   if (missingArg(t))

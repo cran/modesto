@@ -4,25 +4,29 @@
 \alias{PXt}
 \title{Tool to computate the transient probability distribution for a Continuous Time Markov Chain, CTMC.}
 \usage{
-PXt(X0, R, t, epsilon = 0.01)
+PXt(X0, R, t, epsilon = 0.001)
 }
 \arguments{
 \item{X0}{numeric vector, represents the probability distribution of the initial state.}
 
-\item{R}{numeric, represents the rate matrix of a CTMC. Default value is 0.}
+\item{R}{numeric, represents the rate matrix of a CTMC.}
 
 \item{t}{numeric, represents the length of time.}
 
-\item{epsilon}{numeric, represents the error bound of the approximation of P(t). Default values is 0.01.}
+\item{epsilon}{numeric, represents the error bound of the approximation of P(t). Default values is 0.001.}
 }
 \description{
 \code{Pt} is used to obtain the transient probability distribution of a homogeneous continuous time Markov chain at a point of time t.
 }
 \examples{
 library(modesto)
+# A three states CTMC example
 R <- matrix(c(0,2,0,3,0,1,0,6,0),3,3,byrow=TRUE)
 X0 <- c(1,0,0)
-PXt(X0,R,t=0.5,epsilon=0.01) # A three states CTMC example
+PXt(X0,R,t=0.5,epsilon=0.005)
+X0 <- c(0,0,1)
+PXt(X0,R,t=0.5,epsilon=0.005)
+
 }
 \references{
 Ross, S, Introduction to Probability Models, Eleven Edition. Academic Press, 2014.

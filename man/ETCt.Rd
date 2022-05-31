@@ -4,7 +4,7 @@
 \alias{ETCt}
 \title{Tool to computate the Expected Total Cost vector for a Continuous Time Markov Chain, CTMC.}
 \usage{
-ETCt(R, c, t, epsilon = 0.01)
+ETCt(R, c, t, epsilon = 0.001)
 }
 \arguments{
 \item{R}{numeric, represents the rate matrix of a CTMC.}
@@ -13,15 +13,16 @@ ETCt(R, c, t, epsilon = 0.01)
 
 \item{t}{numeric, represents the length of time.}
 
-\item{epsilon}{numeric, represents the error bound of the approximation of M(t). Default value is 0.01.}
+\item{epsilon}{numeric, represents the error bound of the approximation of M(t). Default value is 0.001.}
 }
 \description{
 \code{ETCt} is used to obtain the Expected Total Cost vector up to t of a homogeneous continuous time Markov chain.
 }
 \examples{
 library(modesto)
+# A four states CTMC example
 R <- matrix(c(0,1,0,0,0, 1/72,0,1,0,0, 0,2/72,0,1,0, 0,0,3/72,0,1/2, 0,0,0,4/72,0),5,5,byrow=TRUE)
-ETCt(R,c(-80,-15,50,125,200),t=24,epsilon=0.001) # A four states CTMC example
+ETCt(R,c(-80,-15,50,125,200),t=24,epsilon=0.001)
 }
 \references{
 Ross, S, Introduction to Probability Models, Eleven Edition. Academic Press, 2014.

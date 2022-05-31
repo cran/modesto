@@ -7,12 +7,12 @@
 \method{summary}{modesto}(object, ...)
 }
 \arguments{
-\item{object}{an object of the class modesto. This object is returned from the call to LimDist() function.}
+\item{object}{an object of the class 'modesto'. This object is returned from the call to LimDist() function.}
 
 \item{...}{other arguments.}
 }
 \description{
-summary.modesto displays the summary of the calculated quantities from an object of class 'modesto'.
+summary.modesto displays the summary of calculated quantities from an object of class 'modesto'.
 }
 \examples{
 # A two states CTMC example

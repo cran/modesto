@@ -4,22 +4,23 @@
 \alias{Mt}
 \title{Tool to computate the Occupancy Matrix for a Continuous Time Markov Chain, CTMC.}
 \usage{
-Mt(R, t, epsilon = 0.01)
+Mt(R, t, epsilon = 0.001)
 }
 \arguments{
 \item{R}{numeric, represents the rate matrix of a CTMC.}
 
 \item{t}{numeric, represents the length of time.}
 
-\item{epsilon}{numeric, represents the error bound of the approximation of M(t). Default value is 0.01.}
+\item{epsilon}{numeric, represents the error bound of the approximation of M(t). Default value is 0.001.}
 }
 \description{
 \code{Mt} is used to obtain the Occupancy matrix of a homogeneous continuous time Markov chain for a period of time [0,t].
 }
 \examples{
 library(modesto)
+# A five states CTMC example
 R <- matrix(c(0,1,0,0,0, 1/72,0,1,0,0, 0,2/72,0,1,0, 0,0,3/72,0,1/2, 0,0,0,4/72,0),5,5,byrow=TRUE)
-Mt(R,t=24,epsilon=0.005) # A five states CTMC example
+Mt(R,t=24,epsilon=0.005)
 }
 \references{
 Ross, S, Introduction to Probability Models, Eleven Edition. Academic Press, 2014.

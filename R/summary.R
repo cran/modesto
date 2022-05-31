@@ -1,7 +1,7 @@
 #' summary.modesto
 #'
-#' summary.modesto displays the summary of the calculated quantities from an object of class 'modesto'.
-#' @param object an object of the class modesto. This object is returned from the call to LimDist() function.
+#' summary.modesto displays the summary of calculated quantities from an object of class 'modesto'.
+#' @param object an object of the class 'modesto'. This object is returned from the call to LimDist() function.
 #' @param ... other arguments.
 #' @examples
 #' # A two states CTMC example
@@ -16,8 +16,8 @@ summary.modesto <- function(object, ...) {
     cat(" Status: ", object$indicator, "\n")
     cat("",object$message,"\n")
     cat("\n ------------------------ Results  ---------------------- \n\n")
-    cat(" Limiting distribution: ", object$Lim_dist, "\n")
-    cat(" Error: ", object$error, "\n")
+    cat(" Limiting distribution: ", round(object$Lim_dist,4), "\n")
+    cat(" Error: ", round(object$error,4), "\n")
     cat(" Number of iterations: ", object$n_iter, "\n")
    }
 

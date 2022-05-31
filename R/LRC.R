@@ -8,8 +8,10 @@
 #' @author Carlos Alberto Cardozo Delgado <cardozorpackages@gmail.com>.
 #' @examples
 #' \dontrun{library(modesto)
+#' # A five states CTMC example
 #' R <- matrix(c(0,1,0,0,0, 1/72,0,1,0,0, 0,2/72,0,1,0, 0,0,3/72,0,1/2, 0,0,0,4/72,0),5,5,byrow=TRUE)
-#' LRC(X=R,costs=c(-80,-15,50,125,200)) # A five states CTMC example}
+#' LRC(X=R,costs=c(-80,-15,50,125,200))
+#' }
 #' @importFrom methods new
 #' @importFrom markovchain period
 #' @importFrom markovchain is.irreducible

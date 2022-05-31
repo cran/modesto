@@ -4,14 +4,14 @@
 \alias{Pt2}
 \title{Tool to computate the transition matrix for a Continuous Time Markov Chain, CTMC.}
 \usage{
-Pt2(R, t, epsilon)
+Pt2(R, t, epsilon = 0.001)
 }
 \arguments{
-\item{R}{numeric, represents the rate matrix of a CTMC. Default value is 0.}
+\item{R}{numeric, represents the rate matrix of a CTMC.}
 
 \item{t}{numeric, represents the length of time.}
 
-\item{epsilon}{numeric, represents the error bound of the approximation of P(t). Default values is 0.01.}
+\item{epsilon}{numeric, represents the error bound of the approximation of P(t). Default values is 0.001.}
 }
 \description{
 \code{Pt2} is used to obtain the transition matrix of a homogeneous continuous time Markov chain for a period of time of t.

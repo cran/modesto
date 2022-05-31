@@ -1,9 +1,9 @@
 #' Tool to computate the transition matrix for a Continuous Time Markov Chain, CTMC.
 #'
 #'\code{Pt2} is used to obtain the transition matrix of a homogeneous continuous time Markov chain for a period of time of t.
-#' @param R numeric, represents the rate matrix of a CTMC. Default value is 0.
+#' @param R numeric, represents the rate matrix of a CTMC.
 #' @param t numeric, represents the length of time.
-#' @param epsilon numeric, represents the error bound of the approximation of P(t). Default values is 0.01.
+#' @param epsilon numeric, represents the error bound of the approximation of P(t). Default values is 0.001.
 #' @references Ross, S, Introduction to Probability Models, Eleven Edition. Academic Press, 2014.
 #' @references Kulkarni V, Introduction to modeling and analysis of stochastic systems. Second Edition. Springer-Verlag, 2011.
 #' @author Carlos Alberto Cardozo Delgado <cardozorpackages@gmail.com>.
@@ -18,7 +18,7 @@
 #' # microbenchmark(Pt(R,t=0.7,epsilon=0.005),Pt2(R,t=0.7,epsilon=0.005),times=1000L)
 #' @export Pt2
 
-Pt2 <- function(R,t,epsilon){
+Pt2 <- function(R,t,epsilon=0.001){
   rs <- rowSums(R)
   r <- max(rs)
   P_hat <- R/r
